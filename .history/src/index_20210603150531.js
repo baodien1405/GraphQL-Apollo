@@ -23,16 +23,6 @@ const cache = new InMemoryCache();
 const client = new ApolloClient({
   link: httpLink,
   cache,
-  typeDefs,
-  resolvers,
-});
-
-client.writeData({
-  data: {
-    cartHidden: true,
-    cartItems: [],
-    itemCount: 0,
-  },
 });
 
 ReactDOM.render(
